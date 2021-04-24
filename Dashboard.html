@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #111;
+  margin-left: 180px;
+  height: 52px;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <img class="logo">
+    <a href="#"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a>
+    <a href="Users.html"><i class="fa fa-users" aria-hidden="true"></i> Users</a>
+    <a href="Category.html"><i class="fa fa-files-o" aria-hidden="true"></i> Category</a>
+    <a href="Rates.html"><i class="fa fa-usd" aria-hidden="true"></i> Rates</a>
+    <a href="Parking-solt.html"><i class="fa fa-car" aria-hidden="true"></i> Parking slot</a>
+    <a href="Parking.html"><i class="fa fa-street-view" aria-hidden="true"></i> Parking</a>
+    <a href="Reports.html"><i class="fa fa-id-card" aria-hidden="true"></i> Reports</a>
+    <a href="Company.html"><i class="fa fa-building-o" aria-hidden="true"></i> Company info</a>
+    <a href="Profile.html"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+    <a href="Setting.html"><i class="fa fa-wrench" aria-hidden="true"></i> Setting</a>
+    <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+</div>
+
+     
+</body>
+</html> 

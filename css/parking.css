@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background: #737c78;
+    min-height: 100vh;
+}
+/* sidebar---navigation bar */
+
+/* booking */
+.page-title{
+    color: #acf3d4;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    font-size: 36px;
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.settings-page{
+    margin-left: 80px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.settings-container{
+    width: 80%;
+    height: 100%;
+}
+
+.settings-title{
+    padding: 5px;
+    display: flex;
+    font-size: 24px;
+    margin: 25px 0 0 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    border-radius: 25px;
+    width: 100%;
+}

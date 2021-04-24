@@ -1,0 +1,91 @@
+<!DOCTYPE html>   
+<html>   
+<head>
+    <title>Smart praking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</head>
+<body>
+    <img class="wave" src="images/wave.png">
+    <h1 class="title">Smart Parking System</h1>
+    <div class="container">
+        <div class="img">
+            <img src="images/vehicle.svg">
+        </div>
+        <div class="login-container">
+            <form action="index.html">
+                <img class="avatar" src="images/avatar.svg">
+                <div class="input-div one focus">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h5>Email</h5>
+                        <input class="input" type="text" required>
+                    </div>
+                </div>
+                <div class="input-div two focus">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5>Password</h5>
+                        <input class="input" type="password" required>
+                    </div>
+                </div>
+                <a href="#" class="fpassword">Forgot Password?</a>
+                <input type="submit" class="btn" value="login">
+                <span>Create new account?<a href="Register.html"> Join Now</a></span>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+      (function($) {
+
+        this.csrfToken = '';
+        this.logoutToken = '';
+
+        this.$ = $;
+        this.$('#login').click(() => {
+          this.$.ajax({
+            url: 'http://www.octo2.dev/d8_2_cors/user/login?_format=json',
+            method: 'POST',
+            data: JSON.stringify({
+              name: 'admin',
+              pass: 'pass'
+            }),
+            contentType: 'application/json',
+            dataType: 'json',
+            /*xhrFields: {
+               withCredentials: true
+            }, */
+            crossDomain: true
+          })
+          .then(res => {
+            console.log('RES =>', res);
+            this.csrfToken = res.csrf_token;
+            this.logoutToken = res.logout_token;
+          });
+        });
+
+        this.$('#logout').click(() => {
+          this.$.ajax({
+            url: `http://www.octo2.dev/d8_2_cors/user/logout?_format=json&token=${this.logoutToken}`,
+            method: 'POST',
+            xhrFields: {
+               withCredentials: true
+            },
+            crossDomain: true
+          })
+          .then(res => console.log(res + "no error"))
+          .catch(err => console.log(err));
+        });
+      })(window.$);
+    </script>
+</body>
+</html>
